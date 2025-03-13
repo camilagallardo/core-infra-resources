@@ -1,0 +1,44 @@
+---
+title: How to get all available locations
+description: Guide on how to use our API to get all available locations for a product.
+date: "2023-08-04T00:00:00"
+---
+
+# Function getAvailableLocations
+
+In order to get all the `available locations` for a paticular product we need to use Product, Pricing and Configuration service(PPC). Our API allows easy access by a `GET` request to our `available-locations` endpoint.
+
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v1.0.0/suppliers/{SUPPLIER_CODE}/available-locations/{PRODUCT_ID}/
+
+
+### Example Response:
+
+This is the response from calling with:   
+`SUPPLIER_CODE` = `HIT`   
+`PRODUCT_ID` = `7746`
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v1.0.0/suppliers/HIT/available-locations/7746/
+```
+
+```json copy
+{
+    "AvailableLocationArray": {
+        "AvailableLocation": [
+            {
+                "locationId": 8,
+                "locationName": "FRONT"
+            },
+            {
+                "locationId": 9,
+                "locationName": "BACK"
+            }
+        ]
+    },
+    "ErrorMessage": null
+}
+```
+

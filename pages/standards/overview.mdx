@@ -1,0 +1,92 @@
+---
+title: Standards Overview
+description: Overview of PromoStandards Services
+keywords: PromoStandards, Product Data, Media Content, Pricing and Configuration, Inventory, Purchase Orders, Order Status, Order Shipment Notification, Invoice Service, Web Service, API, PromoStandards API
+date: "2023-08-05"
+---
+
+# Overview of PromoStandards Services
+
+[PromoStandards.org](https://tools.promostandards.org/) provides a documentation and testing environment for PromoStandards web services. While it is intended to be used by developers who are implementing PromoStandards web services in their applications, it is not very developer friendly. In this article we provide you a better overview to understand the services and how they relate to each other.
+
+## PromoStandards Services for creating a good catalog
+
+There are 3 PromoStandards services that are used to create a good catalog. They are:
+- Product Data
+- Media Content
+- Pricing and Configuration
+
+
+### Product Data(Product)
+
+Product Data will provide you with the information about the product. This includes the product name, description, and other information about the product. This is the most important service for creating a good catalog. The Product Data service is used to create the product catalog and the product detail pages. It will also provide information about parts, with keywords so you can use them to generate a keyword search functionality on your site.
+
+You will also be able to update your product information based on the `getProductDateModified` function.
+
+But it does not provide the images for the product. For that you need to use the `Media Content` service.
+
+### Media Content(MED)
+
+Media Content will provide you with the media content for the product and parts. This includes the product images, product videos, and other media content like templates for the product. This service is used to create the product detail pages. Unfortunately, this service does not provide all the data you need to create a good product detail page but, usually it is the supplier that doesn't provide a good classification of the image like blank or decorated, or the image is not a good quality image.
+
+You will also be able to update your product media content based on `getMediaContentModified` function.
+
+Now you have the product data and the media content for the product. But you still need the pricing and configuration for the product.
+
+### Pricing and Configuration(PPC)
+
+Pricing and Configuration will provide you with the pricing and configuration for the product. 
+This includes the pricing for blank or decorated parts. It also tells you all the available charges that are available for this product, all the locations we can print on the product, and all the available colors for the product.
+ This service is used to create the product detail pages but also it is very important for creating a Configured Purchase Order.
+
+You now have a product with enough information to create a good product detail page. But you still need to know if the product is available for sale.
+
+## Inventory(INV)
+
+Inventory will provide you with the inventory for the product and parts and also give you future availability for the product. You can use it to prevent your users to buy a product that is no longer available or to show the future availability for the product.
+
+## Creating Purchase Orders(PO)
+
+Your customers already know what product to buy, the also know where it needs to be shipped, all the decorations they want. Now it is time to create a purchase order. 
+
+The Purchase Order service allows you to buy `Blank`, `Sample` or `Custom Decorated Products`.
+Blank and Sample orders are very simple to create. You just need to provide the part information and the quantity, shipping information and contacts for the orders. 
+
+For Custom Decorated Products you need to go by `Configured` Purchase Orders. In addition to the information to create a blank order you also need to provide the decoration information. This includes the decoration method, the locations, the colors, the charges, and the artwork.
+
+You were able to place your Purchase Order. Now you need to track it.
+
+## Tracking Purchase Orders using Order Status(ODRSTAT)
+
+This allows the consumer of the service to obtain `order status information` grouped by `purchase order number` and `sales order number` for their needs.
+
+#### The Order Status can be:
+
+- `Order Received`(Order has been received)
+- `Order Entry Hold`(Vendor has a problem with the data in the purchase order, and it is preventing the order from being entered.)
+- `Order Confirmed`(Order has been received, entered, and accepted)
+- `Pre-Production`(Vendor has begun to process the order, but it is not in production)
+- `General Hold`(Something is preventing the order from being entered)
+- `Credit Hold`(Vendor is awaiting payment from customer)
+- `Proof Hold`(Vendor is awaiting response to proof)
+- `Art Hold`(Vendor is awaiting suitable artwork from customer)
+- `Back Order Hold`(Order has been backordered; Nothing has shipped yet.)
+- `In Production`(Production of the order has started)
+- `In Storage`(Order is complete, but vendor is waiting to ship goods)
+- `Partial Shipment`(Order has shipped in Part; remaining items in production)
+- `Complete`(Order has shipped in full—No further updates will be given)
+- `Canceled`(Order has been canceled—No further updates will be given)
+
+Once the order is shipped(even partially) you can start tracking the shipment.
+ 
+
+## Tracking Shipments using Order Shipment Notification(OSN)
+
+For that you need to use the Order Shipment Notification service. This service will provide you with the tracking information for the order based on parameters like purchase order number, sales order number, or shipment date, helping in grouping shipment information.
+
+It will also provide you with the shipment information like the carrier, the tracking number, the ship date, the ship to address, and the ship from address, that way we can provide the tracking information to your customers.
+
+
+## Invoice Service(INVC)
+
+This is a service so the suppliers can expose to you the invoices for the order. Main functions are *getInvoices* and *getVoidedInvoices*. You could look using *PONumber*, *Invoice Number*, *Date Search*, and *Available DateTime Search*. 

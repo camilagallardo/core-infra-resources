@@ -1,0 +1,33 @@
+---
+title: Rate Limits
+description: How Rate limits applies to our API to ensure fair usage and prevent abuse.
+keywords: rate limits, rate limits policy, rate limits for api, rate limits for anonymous users, rate limits for basic authenticated users, rate limits for api key and bearer token users, rate limits for free plan, rate limits for standard plan, rate limits for premium plan, rate limit headers, exceeding rate limits, upgrading plans, burst behavior, caching, monitoring, selecting the right plan
+date: "2023-08-09T13:00:00.000Z"
+---
+
+### Rate Limits
+
+Rate limits are applied to our API to ensure fair usage and prevent abuse. Different limits apply depending on the authentication method used and the plan selected by the user.
+
+#### API KEY and Bearer Token Users
+
+Rate limits for API KEY and bearer token users are determined by the sales plan chosen. The following limits apply:
+
+- **Free Plan**: 50 calls per day.
+- **Standard Plan**: 300 calls per day.
+- **Premium Plan**: Unlimited calls per day.
+
+#### Important Notes
+
+- **Rate Limit Headers**: Each response from the API includes headers (`X-RateLimit-Limit`, `X-RateLimit-Remaining`) that provide information about the current rate limit status for your request.
+- **Exceeding Rate Limits**: If you exceed the rate limits, a `429 Too Many Requests` status code will be returned. You must wait until the rate limit window resets to make additional calls.
+- **Upgrading Plans**: If your needs exceed the rate limits of your current plan, you may consider upgrading to a higher plan through your user dashboard. The change will take effect immediately.
+- **Burst Behavior**: Please note that rate limits are enforced at the specified intervals (e.g., per hour, per day). Any unused calls do not roll over to the next interval.
+
+### Considerations for Implementation
+
+- **Caching**: Consider caching results locally to minimize the number of calls and stay within the rate limits.
+- **Monitoring**: Implement monitoring on your side to keep track of the number of calls made and prevent unexpected rate limit issues.
+- **Selecting the Right Plan**: Choose the plan that best fits your needs, taking into consideration the rate limits and the nature of your application.
+
+By adhering to these rate limits, you contribute to a fair and stable environment for all users of our API.

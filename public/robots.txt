@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://docs.psrestful.com
+
+# Sitemaps
+Sitemap: https://docs.psrestful.com/sitemap.xml

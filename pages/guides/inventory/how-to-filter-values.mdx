@@ -1,0 +1,426 @@
+---
+title: How to get filter values for a product
+description: Guide on how to use our API to get filter values for a product
+date: "2023-08-04T00:00:00"
+---
+
+# Function getFilterValues
+
+In order to get `filter values` for a given product we need to use Inventory service(INV). Our API allows easy access by a `GET` request to our `filter-values` endpoint.
+
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v2.0.0/suppliers/{SUPPLIER_CODE}/filter-values/{PRODUCT_ID}/
+
+### Example Response:
+
+This is the response from calling with:   
+`SUPPLIER_CODE` = `HIT`   
+`PRODUCT_ID` = `55414`
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v2.0.0/suppliers/HIT/filter-values/55414/
+```
+
+```json copy
+{
+    "Inventory": {
+        "productId": "55414",
+        "PartInventoryArray": {
+            "PartInventory": [
+                {
+                    "partId": "5414SWHT",
+                    "mainPart": true,
+                    "partColor": "WHITE",
+                    "labelSize": null,
+                    "partDescription": "14OZ ELVATION MUG WHT 77-87047",
+                    "quantityAvailable": {
+                        "Quantity": {
+                            "value": 26,
+                            "uom": "EA"
+                        }
+                    },
+                    "manufacturedItem": false,
+                    "buyToOrder": false,
+                    "replenishmentLeadTime": null,
+                    "attributeSelection": null,
+                    "lastModified": "2023-07-28T15:29:00+00:00",
+                    "InventoryLocationArray": {
+                        "InventoryLocation": [
+                            {
+                                "inventoryLocationId": "42",
+                                "inventoryLocationName": "WEAR MAGIC",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 15,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "FAIRFIELD",
+                                    "country": "US",
+                                    "postalCode": "45014"
+                                }
+                            },
+                            {
+                                "inventoryLocationId": "10",
+                                "inventoryLocationName": "BRYAN DAIRY",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 11,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "LARGO",
+                                    "country": "US",
+                                    "postalCode": "33777"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "partId": "5414SRED",
+                    "mainPart": true,
+                    "partColor": "RED",
+                    "labelSize": null,
+                    "partDescription": "14OZ ELVATION MUG RED 77-87040",
+                    "quantityAvailable": {
+                        "Quantity": {
+                            "value": 48,
+                            "uom": "EA"
+                        }
+                    },
+                    "manufacturedItem": false,
+                    "buyToOrder": false,
+                    "replenishmentLeadTime": null,
+                    "attributeSelection": null,
+                    "lastModified": "2023-07-28T15:29:00+00:00",
+                    "InventoryLocationArray": {
+                        "InventoryLocation": [
+                            {
+                                "inventoryLocationId": "42",
+                                "inventoryLocationName": "WEAR MAGIC",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 48,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "FAIRFIELD",
+                                    "country": "US",
+                                    "postalCode": "45014"
+                                }
+                            },
+                            {
+                                "inventoryLocationId": "10",
+                                "inventoryLocationName": "BRYAN DAIRY",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 0,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "LARGO",
+                                    "country": "US",
+                                    "postalCode": "33777"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "partId": "5414SNAV",
+                    "mainPart": true,
+                    "partColor": "NAVY BLUE",
+                    "labelSize": null,
+                    "partDescription": "14OZ ELVATION MUG NAV 77-87046",
+                    "quantityAvailable": {
+                        "Quantity": {
+                            "value": 21,
+                            "uom": "EA"
+                        }
+                    },
+                    "manufacturedItem": false,
+                    "buyToOrder": false,
+                    "replenishmentLeadTime": null,
+                    "attributeSelection": null,
+                    "lastModified": "2023-07-28T15:29:00+00:00",
+                    "InventoryLocationArray": {
+                        "InventoryLocation": [
+                            {
+                                "inventoryLocationId": "42",
+                                "inventoryLocationName": "WEAR MAGIC",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 10,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "FAIRFIELD",
+                                    "country": "US",
+                                    "postalCode": "45014"
+                                }
+                            },
+                            {
+                                "inventoryLocationId": "10",
+                                "inventoryLocationName": "BRYAN DAIRY",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 11,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "LARGO",
+                                    "country": "US",
+                                    "postalCode": "33777"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "partId": "5414SBLK",
+                    "mainPart": true,
+                    "partColor": "BLACK",
+                    "labelSize": null,
+                    "partDescription": "14OZ ELVATION MUG BLK 77-63605",
+                    "quantityAvailable": {
+                        "Quantity": {
+                            "value": 18,
+                            "uom": "EA"
+                        }
+                    },
+                    "manufacturedItem": false,
+                    "buyToOrder": false,
+                    "replenishmentLeadTime": null,
+                    "attributeSelection": null,
+                    "lastModified": "2023-07-28T15:29:00+00:00",
+                    "InventoryLocationArray": {
+                        "InventoryLocation": [
+                            {
+                                "inventoryLocationId": "42",
+                                "inventoryLocationName": "WEAR MAGIC",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 14,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "FAIRFIELD",
+                                    "country": "US",
+                                    "postalCode": "45014"
+                                }
+                            },
+                            {
+                                "inventoryLocationId": "10",
+                                "inventoryLocationName": "BRYAN DAIRY",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 4,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "LARGO",
+                                    "country": "US",
+                                    "postalCode": "33777"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "partId": "5414SSIL",
+                    "mainPart": true,
+                    "partColor": "SILVER",
+                    "labelSize": null,
+                    "partDescription": "14OZ ELVATION MUG SIL 77-63574",
+                    "quantityAvailable": {
+                        "Quantity": {
+                            "value": 669,
+                            "uom": "EA"
+                        }
+                    },
+                    "manufacturedItem": false,
+                    "buyToOrder": false,
+                    "replenishmentLeadTime": null,
+                    "attributeSelection": null,
+                    "lastModified": "2023-07-28T15:29:01+00:00",
+                    "InventoryLocationArray": {
+                        "InventoryLocation": [
+                            {
+                                "inventoryLocationId": "42",
+                                "inventoryLocationName": "WEAR MAGIC",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 5,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "FAIRFIELD",
+                                    "country": "US",
+                                    "postalCode": "45014"
+                                }
+                            },
+                            {
+                                "inventoryLocationId": "10",
+                                "inventoryLocationName": "BRYAN DAIRY",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 664,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "LARGO",
+                                    "country": "US",
+                                    "postalCode": "33777"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "partId": "5414TEA",
+                    "mainPart": true,
+                    "partColor": "TEAL",
+                    "labelSize": null,
+                    "partDescription": "14OZ MUG,TEAL,OTTOBOX,7763604",
+                    "quantityAvailable": {
+                        "Quantity": {
+                            "value": 0,
+                            "uom": "EA"
+                        }
+                    },
+                    "manufacturedItem": false,
+                    "buyToOrder": false,
+                    "replenishmentLeadTime": null,
+                    "attributeSelection": null,
+                    "lastModified": "2023-07-28T15:29:01+00:00",
+                    "InventoryLocationArray": {
+                        "InventoryLocation": [
+                            {
+                                "inventoryLocationId": "10",
+                                "inventoryLocationName": "BRYAN DAIRY",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 0,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "LARGO",
+                                    "country": "US",
+                                    "postalCode": "33777"
+                                }
+                            },
+                            {
+                                "inventoryLocationId": "42",
+                                "inventoryLocationName": "WEAR MAGIC",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 0,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "FAIRFIELD",
+                                    "country": "US",
+                                    "postalCode": "45014"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "partId": "55436SIL",
+                    "mainPart": false,
+                    "partColor": "SILVER",
+                    "labelSize": null,
+                    "partDescription": "SWIG LIFE SHAKER LID, SILVER",
+                    "quantityAvailable": {
+                        "Quantity": {
+                            "value": 154,
+                            "uom": "EA"
+                        }
+                    },
+                    "manufacturedItem": false,
+                    "buyToOrder": false,
+                    "replenishmentLeadTime": null,
+                    "attributeSelection": null,
+                    "lastModified": "2023-07-28T15:29:01+00:00",
+                    "InventoryLocationArray": {
+                        "InventoryLocation": [
+                            {
+                                "inventoryLocationId": "10",
+                                "inventoryLocationName": "BRYAN DAIRY",
+                                "postalCode": null,
+                                "country": null,
+                                "inventoryLocationQuantity": {
+                                    "Quantity": {
+                                        "value": 154,
+                                        "uom": "EA"
+                                    }
+                                },
+                                "FutureAvailabilityArray": null,
+                                "Address": {
+                                    "city": "LARGO",
+                                    "country": "US",
+                                    "postalCode": "33777"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "ServiceMessageArray": null
+}
+```
+

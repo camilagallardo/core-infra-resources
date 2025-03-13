@@ -1,0 +1,77 @@
+---
+title: How to get order shipment notification
+description: Guide on how to use our API to get order shipment notifications for a given purchase order.
+date: "2023-09-04T00:00:00"
+---
+
+# How to get order order shipment notifications
+
+### Educational video from PromoStandards
+
+<br></br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UUKflvDuzkM?si=qtgSBD9m7PDU1FbU" title="OSN - PromoStandards Education Series" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<hr></hr>
+
+## Function getOrderShipmentNotification
+
+In order to get `order order shipment notification` for a given supplier we need to use Order Shipment Notification Service(OSN). Our API allows easy access by a `GET` request to our `order-shipment-notifications` endpoint.
+
+An order can have shipment notifications once they reach the following statuses:
+- Partially Shipped
+- Shipped
+- Complete
+
+Hence, it doesn't make any sense to query by PO or SO search to orders in other statuses.
+
+## Query Types
+
+|  query_type | Short Name       | PSRESTful | Description                                                                                                    |
+|-------------|------------------|-----------|-----------------------------------------------------------------------------------------------------|
+| 1           | PO Search        | PO_SEARCH | Query based on customer provided purchase order number.                                                        |
+| 2           | SO Search        | SO_SEARCH | Query based on vendor assigned sales order number.                                                             |
+| 3           | ShipDate Search  | SHIP_DATE_SEARCH | Query based on all shipments with a shipment date greater than the value specified in `shipmentDateTimeStamp`. |
+
+---
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v1.0.0/suppliers/{SUPPLIER_CODE}/order-shipment-notifications/
+
+### Example Response:
+
+This is the response from calling with:   
+`supplier_code` = `PCNA`   
+`query_type` = `PO_SEARCH`  
+`reference_number` = `50`
+
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v1.0.0/suppliers/PCNA/order-shipment-notifications/?query_type=PO_SEARCH&reference_number=50
+```
+
+## Error Response Example
+
+```json copy
+{
+    "OrderShipmentNotificationArray": null,
+    "ErrorMessage": {
+        "code": 301,
+        "description": "referenceNumber not found"
+    }
+}
+```
+
+## another Error Response Example
+
+```json copy
+{
+    "OrderShipmentNotificationArray": null,
+    "ErrorMessage": {
+        "code": 999,
+        "description": "Invalid SOAP params passed. The earliest date that can searched can be no longer than 7 days."
+    }
+}
+```

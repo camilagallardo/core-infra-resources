@@ -1,0 +1,114 @@
+---
+title: Standardized Codes summarized per service
+description: PromoStandards documentation for Promotional Products Services Standardized Error Codes
+keywords: promo standards, promotional products errors, PromoStandards API Standardized Codes
+date: "2024-09-21T00:00:00"
+---
+
+
+# Standardized Codes summarized per service
+
+## Core codes
+
+The first group of codes are used in all services
+
+The range of `100-199` has been reserved for standardized error codes.
+
+The number 999 has been reserved for an error codes that is a "General Error - Contact System Service Provider"
+
+| Code | Description                                                                           |
+| ---- | ------------------------------------------------------------------------------------- |
+| 100  | ID (customerID) not found                                                             |
+| 104  | This account is unauthorized to use this service. Please contact the service provider |
+| 105  | Authentication Credentials failed                                                     |
+| 110  | Authentication Credentials required                                                   |
+| 115  | wsVersion not found                                                                   |
+| 120  | The following field(s) are required [Comma Delimited field names]                     |
+| 125  | Not Supported                                                                         |
+| 130  | Function not supported                                                                |
+| 999  | General Error – Contact the System Service Provider                                   |
+
+## Product 1.0.0 & 2.0.0
+
+| Code   | Description                  |
+| ------ | ---------------------------- |
+| 135    | Product color not found      |
+| 140    | Part Id not found            |
+| 145    | Part color not found         |
+| 150    | Part size not found          |
+
+## Media Content 1.1.0
+
+| Code | Description                                                          |
+|------|----------------------------------------------------------------------|
+| 130  | Product Id not found                                                 |
+| 135  | Product color not found                                              |
+| 140  | Part Id not found                                                    |
+| 145  | Part color not found                                                 |
+| 150  | Part size not found                                                  |
+| 155  | Invalid Date Format                                                  |
+| 160  | No Results Found                                                     |
+
+
+## Product Price & Configuration 1.0.0
+
+| Code | Description                         |
+|------|-------------------------------------|
+| 400  | productID not found                 |
+| 401  | currencyID not found                |
+| 402  | priceType not found                 |
+| 403  | fobId not found                     |
+| 404  | localizationCountry not found       |
+| 405  | localizationLanguage not found      |
+| 406  | configurationType not found         |
+
+## Inventory 1.2.1 & 2.0.0
+
+| Code  | Description                                                              |
+| ----- | ------------------------------------------------------------------------ |
+| 600   | Product Id not found  |
+| 610   | Data violation: \{0\}<br/>(Occurs when a supplier does a pre-check on the data and finds that there is a mismatch of data and/or there are incorrect calculations)| 
+| 620   | Field is not supported: \{0\} |
+| 630   | Part Id not found |
+
+## Purchase Order 1.0.0
+
+| Code | Description                                                                                                                                                                                    |
+|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 200  | Duplicated transaction detected. PO was not submitted.                                                                                                                                         |
+| 210  | Data violation: \{0\} (Occurs when a supplier does a pre-check on the data and finds that there is a mismatch of data and/or there are incorrect calculations)                                 |
+| 220  | Field is not supported: \{0\}                                                                                                                                                                  |
+| 230  | Field is partially supported: \{0\} (Use in situations where a supplier cannot accommodate different line level in-hands dates, fobs, etc. The responder will explain in the message what the course of action will be.) |
+| 240  | The following is not supported by the Simple order type: \{0\}                                                                                                                                 |
+| 250  | The PO is received but there may be a delay in processing.    
+
+## Order Status 1.0.0 & 2.0.0
+
+| Code | Description             |
+| ---- | ----------------------- |
+| 200  | queryType not found     |
+| 210  | queryType not supported |
+| 212  | Function does not support returning issues <br/>[This message is used when the implementation does not support returning issues.] |
+| 213  | returnIssueDetailType not supported <br/>[This message is used when the implementation supports returning issues but not the type requested. For example, allIssues is specified but the function can only return openIssues. |
+| 214  | Function does not support returning Product Details |
+| 220  | No Orders were found for the requested criteria |
+| 230  | No Issue was found for the given issue identifier |
+| 240  | The specified Issue has already been resolved |
+| 250  | statusTimeStamp is incorrect or is an invalid date range |
+
+## Order Shipment Notification 1.0.0 & 2.0.0
+
+| Code | Description                                                    |
+| ---- | -------------------------------------------------------------- |
+| 300  | queryType not found                                            |
+| 301  | referenceNumber not found                                      |
+| 302  | shipmentDateTimeStamp is incorrect or is an invalid date range |
+
+## Product Compliance 1.0.0
+
+| Code | Description                   |
+| ---- | ----------------------------- |
+| 600  | Product Id not found          |
+| 610  | Data violation: \{0\}  <br/> (Occurs when a supplier does a pre-check on the data and finds that there is a mismatch of data and/or there are incorrect calculations) |
+| 620  | Field is not supported: \{0\} |
+| 630  | Part Id not found             |

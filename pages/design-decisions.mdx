@@ -1,0 +1,105 @@
+---
+title: Design Decisions
+description: Why we chose to build PSRestful the way we did.
+keywords: PromoStandards API, PSRestful, Design Decisions
+date: "2023-09-14T00:00:00"
+---
+
+import { Callout } from 'nextra/components'
+
+# Why we chose to build PSRestful the way we did
+
+## Overview
+
+The first version of PSRestful is created for Distributors in the Promotional Industry. It is important for Distributors to have access to
+ several suppliers through one API. That is why we ask for `supplier_code` in all the endpoints.
+
+ In order to be more restful we should have used the following endpoints:
+
+    ```url
+    /products?sellable=true&closeout=false&modified_at__gte=2021-09-14T00:00:00
+    /products/<product-id>/medias
+    /products/<product-id>/inventory?filters...
+    /products/<product-id>/available-charges
+    /products/<product-id>/available-locations
+    /products/<product-id>/decoration-colors
+    /products/<product-id>/princing-and-configuration
+    /orders/  (both Purchase Order and Order Status Detail)
+    /invoices/?voided=false&modified_at__gte=2021-09-14T00:00:00
+    ```
+
+    And ask for things like:
+
+    - supplier code
+    - api version
+    - culture
+    - environment
+
+    In HTTP headers.
+
+    But we decided to keep the same structure as the SOAP API in order to make the transition easier for the Distributors.
+
+## Authentication
+
+We use a variety of [authentication](/authentication) methods so the user is confident that their credentials are secure. We even allow some anonymous access 
+to the API when we have the suppliers credentials and the Service/Method to be called is not sensitive.
+
+## HTTP Verbs
+
+We only use `GET` and `POST`. We use `GET` for all queries:
+- Product Data Service
+- Inventory Service
+- PPC Service
+- Media Content Service
+- Order Status Service
+- Invoice Service
+
+We use `POST` only for creating Purchase Orders:
+- Purchase Order Service(sendPO Method)
+
+## About REST
+
+In order to be more restful, we should have use the following conventions in the product data:
+we should have create an endpoint called `/products` and be able to use the query parameters to filter the results like this:
+    
+    ```url
+    /products?sellable=true
+    ```
+
+    or 
+
+    ```url
+    /products?closeout=true
+    ```
+
+for media content we should have used the following endpoint:
+
+    ```url
+    /products/<product-id>/medias?modifed_since=2021-09-14T00:00:00
+    ```
+    
+and we will have both methods in only one comprehensive endpoint.
+
+But in this case `getMediaContent` allows to filter by part id, by media type and class type while `GetMediaDateModifiedRequest` doesn't 
+allow to filter by part id, media type and class type.
+
+Because in order to be really `REST` and fast we should have the data cached and this service is a basic proxy we decided to keep more close to the 
+Standard.
+
+We did some minor modification in the names like:
+- `/medias` instead of `getMediaContent`
+- `/sellable-products` instead of `getProductSellable`
+
+etc.
+
+
+<Callout type="info" emoji="ℹ️">
+    We will create another service that will include caching and will be more restful:
+    - consolidating all product data methods in one endpoint.
+    - consolidating both media content methods in one sub endpoint, behind `/products/<id>/medias`
+    - consolidating both inventory methods in one endpoint, behind `/products/<id>/inventory`
+    - consolidating all PPC methods in one endpoint, behind `/products/<id>/xxx`
+    - consolidating sendPO and order status detail methods in one endpoint, behind `/orders/`
+    - consolidating invoice methods in one endpoint, behind `/invoices/`
+
+</Callout>

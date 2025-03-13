@@ -1,0 +1,287 @@
+---
+title: How to get fob points
+description: Guide on how to use our API to get all fob points for a product
+date: "2023-08-04T00:00:00"
+---
+
+# Function getFobPoints
+
+In order to get all the `fob points` for a given product we need to use Product, Pricing and Configuration service(PPC). Our API allows easy access by a `GET` request to our `fob-points` endpoint.
+
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v1.0.0/suppliers/{SUPPLIER_CODE}/fob-points/{PRODUCT_ID}/
+
+### Example Response:
+
+This is the response from calling with:   
+`SUPPLIER_CODE` = `HIT`   
+`PRODUCT_ID` = `C1717`
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v1.0.0/suppliers/alphabroder/fob-points/C1717/localization_language=en
+```
+
+```json copy
+{
+    "FobPointArray": {
+        "FobPoint": [
+            {
+                "fobId": "BX",
+                "fobPostalCode": "06610",
+                "fobCity": "BRIDGEPORT",
+                "fobState": "CT",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "CC",
+                "fobPostalCode": "60490",
+                "fobCity": "Bolingbrook",
+                "fobState": "IL",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "CN",
+                "fobPostalCode": "93725",
+                "fobCity": "FRESNO",
+                "fobState": "CA",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "FO",
+                "fobPostalCode": "32824",
+                "fobCity": "Orlando",
+                "fobState": "FL",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "FX",
+                "fobPostalCode": "93725",
+                "fobCity": "FRESNO",
+                "fobState": "CA",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "GD",
+                "fobPostalCode": "30096",
+                "fobCity": "Duluth",
+                "fobState": "GA",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "GX",
+                "fobPostalCode": "29341",
+                "fobCity": "Gaffney",
+                "fobState": "SC",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "KC",
+                "fobPostalCode": "66111",
+                "fobCity": "Edwardsville",
+                "fobState": "KS",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "MA",
+                "fobPostalCode": "02346",
+                "fobCity": "Middleboro",
+                "fobState": "MA",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "PH",
+                "fobPostalCode": "17339",
+                "fobCity": "Lewisberry",
+                "fobState": "PA",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "PX",
+                "fobPostalCode": "17339",
+                "fobCity": "Lewisberry",
+                "fobState": "PA",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            },
+            {
+                "fobId": "TD",
+                "fobPostalCode": "75261",
+                "fobCity": "Dallas",
+                "fobState": "TX",
+                "fobCountry": "US",
+                "CurrencySupportedArray": {
+                    "CurrencySupported": [
+                        {
+                            "currency": "USD"
+                        }
+                    ]
+                },
+                "ProductArray": {
+                    "Product": [
+                        {
+                            "productId": "C1717"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "ErrorMessage": null
+}
+```
+

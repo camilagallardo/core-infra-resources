@@ -1,0 +1,41 @@
+---
+title: Note on Environments
+description: Note on how we handle environments
+date: "2023-09-13"
+---
+
+### Note on Environments
+
+Even though suppliers allow two different environments(`production` and `sandbox`) we use 
+the [same api](https://api.psrestful.com/docs) to handle both environments.
+
+The values for the environments are:
+- `PROD` for production
+- `STAGING` for sandbox
+
+
+In the case of `send_po`(purchase-orders) we need to specify the environment in the request body.
+
+```json
+{
+  "environment": "STAGING",
+  ...
+}
+```
+
+For the rest of the endpoints we use a param in the query. For example:
+
+### Staging(sandbox)
+
+```url copy
+https://api.psrestful.com/v2.0.0/suppliers/PCNA/sellable-products?environment=STAGING
+```
+
+
+### Production
+
+```url copy
+https://api.psrestful.com/v2.0.0/suppliers/PCNA/sellable-products?environment=PROD
+```
+
+<strong>NOTE:</strong> The environment param is case sensitive. If not environment is providec `PROD` is the default value.

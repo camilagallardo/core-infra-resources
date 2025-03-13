@@ -1,0 +1,18 @@
+{
+  "index": "Get Started",
+  "why-ps-restful": "Why PSRESTful?",
+  "authentication": "Authentication",
+  "rate-limits": "Rate Limits",
+  "promostandards-general-rollout-strategy-for-distributors": "PromoStandards General Rollout Strategy for Distributors",
+  "environments": "Environments",
+  "design-decisions": "Design Decisions",
+  "guides": "Guides",
+  "standards": "Standards",
+  "api_documentation": {
+    "title": "API Reference",
+    "type": "page",
+    "href": "https://api.psrestful.com/docs",
+    "newWindow": true
+  }
+  
+}

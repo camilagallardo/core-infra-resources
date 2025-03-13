@@ -1,0 +1,65 @@
+---
+title: How to get order status types
+description: Guide on how to use our API to get order status types allowed for a given supplier.
+date: "2023-08-04T00:00:00"
+---
+
+# Function getOrderStatusTypes
+
+In order to get `all order status types` for a given supplier we need to use Order Status Service(ORDSTAT). Our API allows easy access by a `GET` request to our `order-status-types` endpoint.
+
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v1.0.0/suppliers/{SUPPLIER_CODE}/order-status-types/
+
+### Example Response:
+
+This is the response from calling with:   
+`SUPPLIER_CODE` = `PCNA`   
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v1.0.0/suppliers/PCNA/order-status-types/
+```
+
+```json copy
+{
+    "StatusArray": {
+        "Status": [
+            {
+                "id": 10,
+                "name": "Order Received"
+            },
+            {
+                "id": 20,
+                "name": "Order Confirmed"
+            },
+            {
+                "id": 42,
+                "name": "Proof Hold"
+            },
+            {
+                "id": 60,
+                "name": "In Production"
+            },
+            {
+                "id": 75,
+                "name": "Order has shipped in Part"
+            },
+            {
+                "id": 75,
+                "name": "Partial Shipment"
+            },
+            {
+                "id": 80,
+                "name": "Complete"
+            },
+            {
+                "id": 99,
+                "name": "Canceled"
+            }
+        ]
+    },
+    "errorMessage": null
+}
+```

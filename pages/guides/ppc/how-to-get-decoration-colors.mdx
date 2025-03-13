@@ -1,0 +1,216 @@
+---
+title: How to get decoration colors
+description: Guide on how to use our API to get decoration colors for a product
+date: "2023-08-04T00:00:00"
+---
+
+# Function getDecorationColors
+
+In order to get description of possible ` decoration colors` for a paticular product we need to use Product, Pricing and Configuration service(PPC). Our API allows easy access by a `GET` request to our `decoration-colors` endpoint.
+
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v1.0.0/suppliers/{SUPPLIER_CODE}/decoration-colors/{PRODUCT_ID}/
+
+### Example Response:
+
+This is the response from calling with:   
+`SUPPLIER_CODE` = `HIT`   
+`PRODUCT_ID` = `55414`
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v1.0.0/suppliers/HIT/decoration-colors/55414/?location_id=53
+```
+
+
+```json copy
+{
+    "DecorationColors": {
+        "productId": "55414",
+        "locationId": "53",
+        "pmsMatch": true,
+        "fullColor": true,
+        "ColorArray": {
+            "Color": [
+                {
+                    "colorName": "Athletic Gold",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Black",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Brown",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Burgundy",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Forest Green",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Gold",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Gray",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Kelly Green",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Light Blue",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Lime Green",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Maroon",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Navy Blue",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Orange",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Pink",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Process Blue",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Purple",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Red",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Reflex Blue",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Royal Blue",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Silver",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Tan",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Teal",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "White",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Yellow",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Clear",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Tone-on-Tone",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                },
+                {
+                    "colorName": "Gold Tone",
+                    "hex": null,
+                    "approximatePms": null,
+                    "standardColorName": null
+                }
+            ]
+        },
+        "DecorationMethodArray": {
+            "DecorationMethod": [
+                {
+                    "decorationId": 3471228,
+                    "decorationName": "Pad Print"
+                },
+                {
+                    "decorationId": 3471229,
+                    "decorationName": "Laser Engrave"
+                }
+            ]
+        }
+    },
+    "ErrorMessage": null
+}
+```
+

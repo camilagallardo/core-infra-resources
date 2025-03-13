@@ -1,0 +1,1018 @@
+---
+title: How to get product media content
+description: Guide on how to use our API to get product media content
+date: "2023-08-04T00:00:00"
+---
+
+### Educational video from PromoStandards
+
+<br></br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i6t097kIF88?si=27N5TFmKLHrBasLQ" title="Media Content 1.1.0 PromoStandards Education Series" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+# Function getMediaContent
+
+In order to get `all media content` for a given product we need to use Media Content Service(MED). Our API allows easy access by a `GET` request to our `medias` endpoint.
+
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v2.0.0/suppliers/{SUPPLIER_CODE}/medias/{PRODUCT_ID}/
+
+### Example Response:
+
+This is the response from calling with:   
+`SUPPLIER_CODE` = `HIT`   
+`PRODUCT_ID` = `5989`
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v1.1.0/suppliers/HIT/medias/5989/
+```
+
+```json copy
+{
+    "MediaContentArray": {
+        "MediaContent": [
+            {
+                "productId": "5989",
+                "partId": "5989",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_group.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1006,
+                            "classTypeName": "Primary"
+                        }
+                    ]
+                },
+                "DecorationArray": null,
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_group.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1006,
+                            "classTypeName": "Primary"
+                        }
+                    ]
+                },
+                "DecorationArray": null,
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLK",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLK_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Horizontal Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1002,
+                            "classTypeName": "Decorated"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLK",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLK_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLK",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLK_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Vertical Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1006,
+                            "classTypeName": "Primary"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLK",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLK_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLK",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLK_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLK",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLK_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLK",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLK_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Vertical Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1006,
+                            "classTypeName": "Primary"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Open_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Horizontal Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1002,
+                            "classTypeName": "Decorated"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Open_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989BLU",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_BLU_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989LIM",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_LIM_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Horizontal Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1002,
+                            "classTypeName": "Decorated"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989LIM",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_LIM_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989LIM",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_LIM_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Vertical Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1006,
+                            "classTypeName": "Primary"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989LIM",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_LIM_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989LIM",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_LIM_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989LIM",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_LIM_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989LIM",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_LIM_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989RED",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_RED_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Vertical Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1006,
+                            "classTypeName": "Primary"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989RED",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_RED_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989RED",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_RED_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": "Horizontal Silkscreen Imprint",
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1002,
+                            "classTypeName": "Decorated"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989RED",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_RED_Blank.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 51,
+                            "decorationName": "Blank"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989RED",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_RED_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989RED",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_RED_Horizontal_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            },
+            {
+                "productId": "5989",
+                "partId": "5989RED",
+                "url": "https://www.hitpromo.net/imageManager/show/5989_RED_Vertical_Silkscreen.jpg",
+                "mediaType": "Image",
+                "fileSize": null,
+                "width": null,
+                "height": null,
+                "dpi": null,
+                "color": null,
+                "description": null,
+                "singlePart": false,
+                "changeTimeStamp": null,
+                "ClassTypeArray": {
+                    "ClassType": [
+                        {
+                            "classTypeId": 1001,
+                            "classTypeName": "Blank"
+                        }
+                    ]
+                },
+                "DecorationArray": {
+                    "Decoration": [
+                        {
+                            "decorationId": 54,
+                            "decorationName": "Silk-Screen"
+                        }
+                    ]
+                },
+                "LocationArray": null
+            }
+        ]
+    },
+    "ErrorMessage": null
+}
+```

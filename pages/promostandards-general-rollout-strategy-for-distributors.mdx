@@ -1,0 +1,72 @@
+---
+title: PromoStandards General Rollout Strategy for Distributors
+description: PromoStandards documentation for Product Data Service version 2.0.0
+keywords: PromoStandards, Product Data, Service, 2.0.0, PromoStandards Strategy
+date: "2024-07-19T00:00:00"
+---
+
+### PromoStandards General Rollout Strategy for Distributors
+
+#### Introduction
+
+Implementing PromoStandards services is crucial for distributors aiming to reduce costs, improve efficiency, and boost profitability. PromoStandards offers a suite of standardized APIs that streamline communication with suppliers, reduce manual errors, and speed up product delivery. For distributors, adopting these services can lead to significant operational improvements and cost savings.
+
+#### Importance of PromoStandards Services
+
+Every company seeks to reduce costs, improve efficiency, and enhance profitability. Implementing PromoStandards in your organization is crucial for achieving these goals. The widely used PromoStandards services include:
+- **Product Data (Product)**
+- **Media Content (MED)**
+- **Pricing and Configuration (PPC)**
+- **Inventory (INV)**
+- **Purchase Order (PO)**
+- **Order Status (ODRSTAT)**
+- **Order Shipment Notification (OSN)**
+
+These services help businesses create a comprehensive and accurate product catalog, maintain up-to-date inventory, streamline order processes, and provide timely order status updates, all of which contribute to cost reduction and improved efficiency.
+
+#### General Rollout Strategy
+
+Most distributors start with simpler APIs and progressively work towards more complex ones. The integration paths can be categorized into two primary paths: Transactional and Non-Transactional.
+
+##### Transactional Path:
+1. **Inventory (INV)**: Start with checking inventory levels.
+2. **Order Status (ODRSTAT)**: Integrate to track the status of orders.
+3. **Order Shipment Notification (OSN)**: Set up notifications for order shipments.
+
+##### Non-Transactional Path:
+1. **Media Content (MED)**: Begin by integrating media content for products.
+2. **Product Data (Product)**: Integrate product information for a detailed catalog.
+
+Ultimately, both paths converge on the need for Pricing & Configuration (PPC) before implementing Purchase Orders (PO), as PPC is essential for accurate order submissions. Purchase Orders will then facilitate the actual order placements.
+
+#### Integration Considerations
+
+**Call Velocity**: Avoid excessive API calls which can overload supplier endpoints and lead to reduced performance. For example, querying order status every hour instead of every minute is sufficient and more efficient.
+
+**Retry Logic**: Implement simple retry mechanisms for failed calls, especially for critical operations like submitting purchase orders.
+
+**Caching Data Locally**: Cache non-transactional data (like product and media information) locally to reduce redundant API calls and improve response times.
+
+**Audit Logs**: Maintain logs of requests and responses to track the success of integrations, troubleshoot issues, and report on service usage.
+
+#### How PromoStandards Services Help Reduce Costs and Improve Efficiency
+
+1. **Product Data (Product)**: Provides comprehensive product information, aiding in creating a detailed product catalog.
+2. **Media Content (MED)**: Supplies images and videos for products, enhancing the visual appeal of the catalog.
+3. **Pricing and Configuration (PPC)**: Offers detailed pricing and configuration options, ensuring accurate pricing and reducing the likelihood of errors in order submissions.
+4. **Inventory (INV)**: Helps manage stock levels, preventing over-selling and stockouts.
+5. **Purchase Order (PO)**: Automates order placements, reducing manual errors and speeding up the order processing time.
+6. **Order Status (ODRSTAT)**: Enables automatic status updates, reducing the need for manual follow-ups.
+7. **Order Shipment Notification (OSN)**: Provides timely shipment information, enhancing customer satisfaction and enabling better shipment tracking.
+
+### Detailed Service Descriptions
+
+**Product Data + Media Content**: Together, they create a basic yet comprehensive catalog, allowing distributors to display products with multiple images and videos.
+
+**Pricing and Configuration (PPC)**: Provides control over pricing and product configuration, displaying available decoration locations and imprint methods. It also includes all charges, ensuring accurate pricing.
+
+**Purchase Order (PO)**: Reduces back-and-forth communication with suppliers, leading to faster production and reduced costs.
+
+**Order Status (ODRSTAT)**: Automates status checks, allowing quick resolution of holds and speeding up production times.
+
+By strategically rolling out these services and leveraging their capabilities, distributors can significantly enhance their operational efficiency and cost-effectiveness.

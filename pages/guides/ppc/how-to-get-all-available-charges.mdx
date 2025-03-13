@@ -1,0 +1,59 @@
+---
+title: How to get all available charges
+description: Guide on how to use our API to get all available charges for a product
+date: "2023-08-04T00:00:00"
+---
+
+# Function getAllAvaibableCharges
+
+In order to get all the `available charges` for a paticular product we need to use Product, Pricing and Configuration service(PPC). Our API allows easy access by a `GET` request to our `available-charges` endpoint.
+
+
+### HTTP VERB: `GET`
+### URL: https://api.psrestful.com/v1.0.0/suppliers/{SUPPLIER_CODE}/available-charges/{PRODUCT_ID}/
+
+### Example Response:
+
+This is the response from calling with:   
+`SUPPLIER_CODE` = `HIT`   
+`PRODUCT_ID` = `55414`
+
+**COMPLETE URL**: 
+```url copy
+https://api.psrestful.com/v1.0.0/suppliers/HIT/available-charges/55414/
+```
+
+```json copy
+{
+    "AvailableChargeArray": {
+        "AvailableCharge": [
+            {
+                "chargeId": 8046412,
+                "chargeName": "Pad Print",
+                "chargeType": "Setup",
+                "chargeDescription": "Pad Print"
+            },
+            {
+                "chargeId": 8046413,
+                "chargeName": "Laser Engrave",
+                "chargeType": "Setup",
+                "chargeDescription": "Laser Engrave"
+            },
+            {
+                "chargeId": 8046414,
+                "chargeName": "INDIVIDUAL PERSONALIZATION",
+                "chargeType": "Run",
+                "chargeDescription": "DECORATION"
+            },
+            {
+                "chargeId": 8046415,
+                "chargeName": "PERSONALIZATION",
+                "chargeType": "Setup",
+                "chargeDescription": "SETUP"
+            }
+        ]
+    },
+    "errorMessage": null
+}
+```
+
